@@ -1,10 +1,23 @@
 package fr.zendraft.skyblockendersky.commands.islands;
 
-import org.bukkit.command.Command;
-import org.bukkit.command.CommandSender;
+import fr.zendraft.skyblockendersky.objects.ChildCommand;
+import lombok.Getter;
+import lombok.Setter;
+import lombok.experimental.SuperBuilder;
+import org.bukkit.entity.Player;
 
-public class IslandHome {
-    public IslandHome(CommandSender sender, Command command, String label, String[] args){
-        if()
+@Getter
+@Setter
+@SuperBuilder
+public class IslandHome extends ChildCommand {
+    private Player player;
+    @Override
+    protected void execute() {
+
+    }
+
+    @Override
+    protected void initVar(){
+        setPlayer((Player) getSender());
     }
 }

@@ -6,7 +6,6 @@ public class Cache {
     Thread updateThread;
     AtomicBoolean updateInProgress = new AtomicBoolean(false);
 
-
     public void init(){
 
     }

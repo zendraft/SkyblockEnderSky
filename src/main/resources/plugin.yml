@@ -1,0 +1,4 @@
+name: SkyblockEnderSky
+version: '${version}'
+main: fr.zendraft.skyblockendersky.SkyblockEnderSky
+api-version: 1.20

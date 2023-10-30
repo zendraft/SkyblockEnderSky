@@ -1,0 +1,2 @@
+# SkyblockEnderSky
+ Plugin for EnderSky

@@ -1,27 +1,39 @@
 package fr.zendraft.skyblockendersky.objects.guis;
 
+import fr.zendraft.skyblockendersky.utils.objects.ItemGuiIndexed;
 import lombok.Getter;
 import lombok.Setter;
 import org.bukkit.Bukkit;
-import org.bukkit.entity.Player;
 import org.bukkit.inventory.Inventory;
 import org.bukkit.inventory.ItemStack;
 
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+
 @Getter
 @Setter
-public class CustomIslandInventory implements CustomInventory {
-    private ItemStack[] inventoryStack = new ItemStack[0];
+public abstract class CustomIslandInventory implements CustomInventory {
+    private List<ItemGuiIndexed> defaultItems = new ArrayList<>();
     private int nbLine = 6;
 
-    @Override
-    public Inventory getDefault(Player player){
-        Inventory inv = Bukkit.createInventory(null, nbLine);
-        inv.setContents(updateForPlayerStats(inventoryStack));
-        return inv;
-    }
+    private Inventory defaultInventory;
 
     @Override
-    public ItemStack[] updateForPlayerStats(ItemStack[] items){
+    public void createDefault(){
+        Inventory inv = Bukkit.createInventory(null, nbLine);
+        createDefaultItems();
+        defaultItems.forEach(itemGui-> inv.setItem(itemGui.getId(), itemGui.getItem()));
+    }
+    @Override
+    public void createDefaultItems(){
+    }
+    protected void addDefaultItem(int id, ItemStack item){
+        defaultItems.add(new ItemGuiIndexed(id,item));
+    }
+
+    private HashMap<Integer, ItemStack> updateForPlayerStats( HashMap<Integer, ItemStack> items){
         return items;
     }
+
 }

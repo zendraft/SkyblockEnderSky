@@ -1,9 +1,11 @@
 package fr.zendraft.skyblockendersky.commands.islands;
 
-import fr.zendraft.skyblockendersky.objects.ChildCommand;
+import fr.zendraft.skyblockendersky.objects.commands.ChildCommand;
 import lombok.Getter;
 import lombok.Setter;
 import lombok.experimental.SuperBuilder;
+import org.bukkit.command.Command;
+import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
 
 
@@ -13,13 +15,17 @@ import org.bukkit.entity.Player;
 public class IslandChallenge extends ChildCommand {
     private Player player;
 
+    public IslandChallenge(CommandSender sender, Command command, String label, String[] args) {
+        super(sender,command,label,args);
+    }
+
     @Override
-    protected void execute() {
+    public void execute() {
 
     }
 
     @Override
-    protected void initVar(){
+    public void initVar(){
         setPlayer((Player) getSender());
     }
 }

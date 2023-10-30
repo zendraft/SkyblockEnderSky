@@ -10,6 +10,5 @@ import java.util.UUID;
 public class IsPlayer {
     private String name;
     private UUID uuid;
-    private Rank islandRank;
-
+    private int rankID;
 }

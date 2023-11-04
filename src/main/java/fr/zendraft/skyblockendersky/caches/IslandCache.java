@@ -10,7 +10,7 @@ public class IslandCache extends Cache {
     private HashMap<UUID, IslandCache> islandsInCache = new HashMap<>();
     private Thread updateThread;
 
-    IslandCache(){
+    public IslandCache(){
 
     }
 

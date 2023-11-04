@@ -1,15 +1,12 @@
 package fr.zendraft.skyblockendersky.objects.guis.customs;
 
-import fr.zendraft.skyblockendersky.objects.guis.CustomIslandInventory;
+import fr.zendraft.skyblockendersky.objects.guis.CustomInventory;
 import fr.zendraft.skyblockendersky.utils.ItemBuilder;
 import lombok.Getter;
 import org.bukkit.Material;
-import org.bukkit.inventory.ItemStack;
-
-import java.util.HashMap;
 
 @Getter
-public class IslandGUI extends CustomIslandInventory {
+public class IslandGUI extends CustomInventory {
 
     public IslandGUI(){
         setNbLine(6);

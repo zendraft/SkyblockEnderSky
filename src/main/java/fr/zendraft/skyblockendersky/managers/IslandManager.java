@@ -4,6 +4,14 @@ import java.util.HashMap;
 import java.util.UUID;
 
 public class IslandManager {
-    HashMap<UUID, IslandManager> islands = new HashMap<>();
-    HashMap<String, UUID> islandPlayers = new HashMap<>();
+    private IslandCreation islandCreation;
+
+    private HashMap<UUID, IslandManager> islands = new HashMap<>();
+    private HashMap<String, UUID> islandPlayers = new HashMap<>();
+
+    public IslandManager(){
+        islandCreation = new IslandCreation();
+    }
+
+
 }

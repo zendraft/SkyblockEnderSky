@@ -1,4 +1,4 @@
-package fr.zendraft.skyblockendersky.objects;
+package fr.zendraft.skyblockendersky.objects.islands;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;

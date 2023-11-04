@@ -4,7 +4,7 @@ import java.util.*;
 
 public class IslandMaps {
     private HashMap<Integer,Boolean> mapsX = new HashMap<>();
-    private HashMap<Integer, Boolean> mapsY = new HashMap<>();
+    private HashMap<Integer, Boolean> mapsZ = new HashMap<>();
 
 
     public void createNewIsland(){
